@@ -96,8 +96,9 @@ int main() {
     cin.tie(NULL);
     while(true) 
     {   
+        cout<<"a b c d e f g h i are the coordinates for the player to type x or o tastelessly a "<<endl; 
         cout<<"PRESS NAME OF 2 PLAYER (p1 mark o && p2 mark x)"<<endl; 
-        string p1,p2; cin>>p1>>p2; 
+        string p1,p2; cin>  >p1>>p2; 
         cout<<"p1 named : "<<p1<<endl;
         cout<<"p2 named : "<<p2<<endl;
         int n = 3; 
@@ -250,10 +251,10 @@ int main() {
                 break; 
             }
         } 
-        cout<<"Do you want to continue play ! enter 1 to continue and 0 to end"<<endl;
-        int k; cin>>k; 
-        if (k == 0) {cout<<"goodbye buddy !";break;} 
-        else if (k == 1) {cout<<"continue !"<<endl;}
+        cout<<"Do you want to continue play ! enter y to continue and n to end"<<endl;
+        char k; cin>>k; 
+        if (k == 'n') {cout<<"goodbye buddy !";break;} 
+        else if (k == 'y') {cout<<"continue !"<<endl;}
     } 
     return 0;
 }
