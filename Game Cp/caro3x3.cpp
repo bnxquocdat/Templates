@@ -98,7 +98,7 @@ int main() {
     {   
         cout<<"a b c d e f g h i are the coordinates for the player to type x or o tastelessly a "<<endl; 
         cout<<"PRESS NAME OF 2 PLAYER (p1 mark o && p2 mark x)"<<endl; 
-        string p1,p2; cin>  >p1>>p2; 
+        string p1,p2; cin>>p1>>p2; 
         cout<<"p1 named : "<<p1<<endl;
         cout<<"p2 named : "<<p2<<endl;
         int n = 3; 
