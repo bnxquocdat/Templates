@@ -56,6 +56,30 @@ bool recursion_binary_search(int a[] , int r , int l , int x) // recursion binar
 		return recursion_binary_search(a , r , mid - 1 , x); 
 	}
 }
+int first_pos(int a[] , int n , int m)
+{
+	int res = -1; 
+	int r = 0; 
+	int l = n - 1; 
+	while(l >= r) 
+	{
+		int mid = (l + r) / 2; 
+		if (a[mid] == m) 
+		{
+			res = mid;
+			r = r + 1; 
+		}
+		else if (m > a[mid]) 
+		{
+			r = mid + 1; 
+		}
+		else if (m < a[mid]) 
+		{
+			l = mid - 1; 
+		}
+	}
+	return res; 
+}
 /*
 thequickbrownfoxjumpsoverthelazydog
 ⡆⣐⢕⢕⢕⢕⢕⢕⢕⢕⠅⢗⢕⢕⢕⢕⢕⢕⢕⠕⠕⢕⢕⢕⢕⢕⢕⢕⢕⢕
@@ -85,6 +109,7 @@ int main() {
  	} 
  	string x = (recursion_binary_search(a , 0 , n - 1 , m)) ? "yes" : "no" ; 
  	string y = (binary_search(a , a + n , m)) ? "yes" : "no" ; // find in [x , y - 1] => binary_search(x , y - 1 , key);
- 	cout<<y<<"\n"; 
+ 	//string z = (binary_search(a.begin() , a.end())) ? "yes" : "no" ; //find in [x , y - 1] => binary_search(x , y - 1 , key); => vector
+ 	cout<<first_pos(a , n , m)<<"\n"; 
     return 0;
 }
