@@ -3,10 +3,10 @@ using namespace std;
 using ll = long long; 
 #define ull unsigned long long 
 const int mod = 1000000;
+bool mp[1000000]; 
 void eratosthenes() // sang snt (1 - n)
 {
     int n; cin>>n; 
-    map<int , bool> mp; 
     for (int i = 2; i <= n; i++) 
     {
         mp[i] = true;
@@ -29,11 +29,10 @@ void eratosthenes() // sang snt (1 - n)
         }
     }
 }
-oid Eratosthenes2() // sol chuan sang so nguyen to trenn doan (use this)
+void Eratosthenes2() // sol chuan sang so nguyen to trenn doan (use this)
 {
     int n; cin>>n; 
     int m; cin>>m; 
-    map<int , bool> mp; 
     for (int i = 2; i <= m; i++) 
     {
         mp[i] = true; 
@@ -53,7 +52,7 @@ oid Eratosthenes2() // sol chuan sang so nguyen to trenn doan (use this)
         }
     }
 }
-void SieveOfEratosthenes(int l, int r) // solution from other coder
+void SieveOfEratosthenes(int l, int r) 
 {
     // tạo một mảng để lưu trữ số nguyên tố
     bool prime[r - l + 1];
